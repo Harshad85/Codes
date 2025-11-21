@@ -1,0 +1,352 @@
+1. self introduction and work experience
+ 
+2. i2c protocol- clock stretching,pull up resistor how to calculate,if slave device did not ack what are all the possible cause?
+ 
+3.short a=320;
+unsigned char * ptr=NULL;
+ptr=&a;
+printf("%d",*ptr);
+ 
+4. int arr[]={ 1,2,3,4,5,6};
+int *p=arr;
+++*p;
+p+=2; 
+printf("%d",*p);
+ 
+5. int arr[] ={1,2,2,3,4,4,4,5,2,6,7}
+Frequency of occurrence of each data 
+ 
+6. they given one  8bit register in that we have to change last 3 bit without change other bit 
+ 
+7. int fun(int **arr, int * col, int * row)
+{
+// Fill code with all error checking condition and intialize with zero
+}
+ 
+8.arm cortex process interrupt working
+
+I2C protocol
+3. If slave is not giving ACK signal how you will debug ?
+4. Power management in the project and How Implemented?
+5. RTOS: Two tasks one has print Even nos and Another has to print Odd numbers : Numbers from 0 up to n 
+6. Int arr[][]={{1,2 3 4 5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20}};
+int *per = arr+3;
+Print ("%d",*per[1])
+int *per = *arr+3
+Print ("%d",*per[1])
+7. str = "Hello, welcome to the welcomeworld of C programminwelcome"
+Sub string : welcome
+Find indexs from where sub string started
+---
+2. i2c protocol- clock stretching
+3. compare spi and i2c
+4. int arr[]={ 1,2,3,4,5,6};
+int *p=arr;
+++*p;
+p+=2; 
+printf("%d",*p);
+5. int arr[] ={1,2,2,3,4,4,4,5,2,6,7}
+Frequency of occurrence of each data in single loop
+6. set and reset bit by position
+7. int fun(int **arr, int * col, int * row)
+{
+// Fill code with all error checking condition
+UART configuration (what things to do to configure and read and write the data)
+2.) Once you transmit one byte of data, how will you know what type of data is stored and if it is correct or not.
+3.) UART Data Frame
+4.) I2C data frame 
+5.) What is the API and how do I read and write the data.
+6.) Key features of I2C
+7.) In your project, where did you use I2C and what work did you do?
+8.) What is an interrupt?
+9.) The CPU will get interrupted or not.
+10.) If a If a low-priority interrupt is running suddenly, a high-priority interrupt will occur.
+11.) What is direct memory access?
+12.) How will DMA work?
+13.) In DMA, do we need any processor support?
+
+
+**********Coding*********
+1.)
+
+static int a = 30;
+
+int *f1(void)
+{
+  static int a =10;
+  int x = 10;
+  return x;
+}
+
+int *f2(void)
+{
+  int ptr = (int)malloc(sizeof(int));
+  *ptr = 20;
+  
+return *ptr;
+}
+
+If these f1() and f2 functions call the main function, what is the output.
+
+2.)
+what is the output :
+
+int main()
+{
+ int a =2, b = 4;
+ int c = (a+b)++;
+ printf("%d \n",c);
+
+return 0;
+}
+Output:
+ Error
+
+
+3.)
+
+int  function()
+
+{
+
+  int x = 0xab;
+
+  int y = 0xcd;
+
+  int z;
+
+  z =         // output should be 0xda  (lower nibble of varaible 'y' and upper nibble of 'x')
+
+  return z; 
+
+}
+*/
+
+output:
+
+z = ((x & 0xF0)>>4 ) | ((y & 0x0F)<<4);
+
+
+4.)
+
+#include<stdio.h>
+
+const volatile unsigned int x = 12;
+
+int main()
+{
+    int *ptr;
+    ptr = &x;
+    *ptr = 20;
+    printf("%d \n",x);
+
+return 0;
+}
+
+output:
+Not a good way, but the output will print
+x = 20
+
+3. We have some different ranges return a grade as per the range wap to test unit test.
+
+RANGES 0-35 Retrurn d;
+RANGES 36-50 Retrurn c;
+RANGES 50-75 Retrurn b;
+RANGES 75-100 Retrurn a;
+Write a unit test for test a these ranges.
+3. How can you see the inserted kernel module list from the linux prompt.
+4. How can you create the new kernel menuconfig tab for "make menuconfig"
+5. Explain about the linux boot process.
+6.	How can we restrict the variable acess between two different c files.
+	Ex: 1.c ,2.c etc
+7.	How can we access the global variable between two different c files.
+8.	Explain about CPU benchmark SPEC options/arguments.
+9.	Explain about the kernel general benchmarks like LMbench/Sysbench/iperf/hdparm/fio etc.
+
+.Kernel booting sequence. How it finds the RFS.
+2.What is the use of initrd and initramfs
+3.How interrupts is handled. Example - If a H/W generates then how it is handled by interrupt routines.
+4.Interrupt service routine
+5.Vector Table
+6.System programming - Mutex, Spinlocks.
+7.Candidate should be able to find the best method for a given scenario if spinlock or mutex is better.
+8.C programs MCQ(Pointers, Local Variables)
+Example
+void main()
+{
+int a,b=0;
+int *p=&b;
+p++,*p=20;
+printf("%d %d",a,b);
+}
+
+
+.create a task in FreeRTOS?
+2.wap to tasks switching
+3.what is out of memory index
+4.what is critical system in RTOs
+5.have you faced memory related issues in your project
+6.What is task starvation, and how can it be avoided?
+7.wap to fetch only 8 bits data from 64 bit data
+8.How do FreeRTOS semaphores differ from binary semaphores?
+9.Mutex,semaphore?
+10.stack overflow in rtos
+11.which tool used for config
+12.which are all moduels configured
+13.Mcu conatiners in mcal
+14.why crystal frequency required
+15.do you know about divideers.
+About I2C, UART protocols
+5) How IRQ is handled
+6) Significance of RTOS
+7) How RTOS is used in my current project?
+8) How many tasks I have created and used?
+9) Pseudo code to create a task
+10) Pseudo code to create a queue
+11) Why and when to use queue?
+12) Pseudo code to send data from one task to another.
+13) About peripheral interface experience done in my project.
+2.If you are given two 8-bit values from a sensor — one representing the integer part of a measurement (e.g., 12 volts) and the other representing the fractional part (e.g., 95 for 0.95 volts in 0.01 resolution) — how would you combine them into a float or a fixed-point number for processing?
+3.You are given two 8-bit registers:
+Register 0x20 contains the upper 3 bits of an 11-bit value NDIV[10:8] (in bits 2:0),
+Register 0x21 contains the lower 8 bits NDIV[7:0].
+If these values are read using reg_read(), how would you combine them to get the final 11-bit NDIV value in a uint16_t?"
+0x20
+7 6 5 4 3 2 1 0
+|-|-|-| | | | | |
+<NDIV[10:8]>
+0x21
+7 6 5 4 3 2 1 0
+|-|-|-|-|-|-|-|-|
+<NDIV[7:0]>
+NDIV[10:0]
+int reg_read(const struct device* dev, uint8_t regAddr, void* readBuff, uint8_t numBytes);
+4.Write the code for Moving Average Algorithm (related to my project)
+1.What is a GPU?
+2.What is your current work related to the GPU?
+3.How does a GPU application work?
+
+C Programming:
+4.What are the compilation steps for a C program?
+5.What is the role of the linker?
+6.What is the difference between static linking and dynamic linking?
+7.Write a C program to swap consecutive bits in a 32-bit integer.
+8.Write a C program to replicate the strstr function.
+
+Operating System:
+9.What are kernel data structures?
+10.Explain how the fork system call works.
+11.What is the difference between fork and vfork?
+12.How does the fork system call return two different values?
+
+Round 2:
+
+Device Driver:
+1.What is the purpose of a device driver?
+2.What is the role of udev?
+3.How do you register a character device driver?
+4.Explain how the open system call works in a device driver.
+
+C Programming:
+5.Detailed discussion on the register storage class:
+6.What is its purpose, and how does the toolchain handle it?
+7.Write a C program to replicate the strtok function.
+8.What is the difference between a structure and a union?
+
+Operating System:
+9.What is a deadlock?
+10.What are the necessary conditions for a deadlock to occur?
+11.What is the role of the MMU (Memory Management Unit) in an OS?
+12.How is a virtual address conver
+1. cont ptr and ptr const
+2. static keyword
+3. call by reference code
+4. virtual function
+12.How to read the pointer statements.
+example:- int *a[10];
+                int* (a)(int);
+2.Linux Device Drivers
+3.Platform drivers
+4.Device Tree(DTS)
+5.Conversion of physical to virtual address
+6.How to add a device in DTS
+7.How not to compile a particular driver source code(rtc) but compile rest of the drivers.
+Array sorting without multiple loops.
+2.They gave one more array which consists of 0, 1, and 2. We need to sort by using that (0,1,2) as logic.
+3.We need to create the list; each and every time we need to add the node at the head node.
+4.Reverse the linked list.
+5.Print the nth node from the last.
+6.Find whether there is a loop in the linked list or not.
+7.Check if the system is little endian or big endian.
+8.They gave start and end position; I need to set the bits in the given position.
+9.Given the character array, I need to access elements using the integer pointer:
+10.char * arr[] = {1,2,3,4,5,6,7,8,9};
+int *ptr = (char *)&arr;
+// By using *ptr we need to print ‘7’.
+11.Write a macro that sets the n bits from LSB, e.g.:
+#define set_nbits(N)
+12.In bitwise:
+Input: 0x12345678
+Output: 0x78563412
+13.Types of synchronization techniques, explain the differences between them with real-time examples.
+14.Interrupt flow.
+15.Explain memory management.
+16.There are 2 threads; 1 thread accesses the critical section and after completion, it has to notify the other thread.
+17.What is a Race Around Condition?
+18.Types of architectures you know and explain the differences.
+19.Explain about a peripheral you know and how it works internally (like UART, I2C, SPI, I2S).
+20.Explain about the platform driver.
+21.Questions on the projects.
+------------------------------------------------------------------------------------------------------------------------------
+
+#pragma pack(1)
+
+struct a
+{
+int a;//100  4
+char b;//104 -->4  
+int c;//106
+}
+---------------------------
+char arr[10] = {0, 1, 2, 3, 4 ,5, 6, 7, 8, 9};
+
+int *ptr = arr;
+int a= ((char)(ptr + 7));
+printf("%d",a);
+
+-----------------------------
+#define TOG_N(num, a, b) while(a!b){ num ^ (1<<a); a++;}
+//0xFF a=1 b=3
+num  =0xff ->
+while(a!b)
+{
+num ^ (1<<a);
+a++;
+}
+-------------------------------
+
+int s_mas(int* arr, int size)
+{
+int max =0;
+int s_max =0;//12345
+for(int i=0; i<size; i++)
+{
+if(arr[i] > max)
+{
+s_max = max;
+max =arr[i];
+}
+}
+return s_max;
+}
+
+-----------------------------------
+char a ="1234";
+1234 ->int;
+a->65 z
+int itoa(char a)
+{
+//a=a+65;
+
+return a;
+}
